@@ -5,7 +5,5 @@ practical works
 \
 **Octave version:** 5.1.0
 \
-**Feedback:**
-- [vk](https://vk.com/kashapovd)
-- [telegram](https://t.me/kashapovd)
+**Feedback:** [vk](https://vk.com/kashapovd), [telegram](https://t.me/kashapovd)
 
