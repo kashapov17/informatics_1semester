@@ -21,7 +21,7 @@ function [b,n] = calc_info(msg, alph, alph_p)
       endif
     endfor
     if ~c 
-      warning("Символ '%s' на месте %d в строке msg не найден в алфавите", msg(i), i)
+      warning("Символ '%s' на месте %d в msg не найден в алфавите", msg(i), i)
     endif
   endfor
   
