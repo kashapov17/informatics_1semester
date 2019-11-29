@@ -11,17 +11,11 @@ function [b,n] = calc_info(msg, alph, alph_p)
   
   b=0;
   for i=1:len_msg
-    c=false;
-    for j=1:len_alph
-      if msg(i)==alph(j)
-        %%printf("%s-%s    %d-%d\n", msg(i), alph(j), i, j)
-        c=true;
-        b -= log(alph_p(j));
-        break  
-      endif
-    endfor
-    if ~c 
-      warning("Символ '%s' на месте %d в msg не найден в алфавите", msg(i), i)
+    m = msg(i)==alph(1:len_alph);
+    if any(m)
+      b -= log2(alph_p(m));
+    else
+      warning("Символ '%s' на %d позиции из msg не найден в алфавите", msg(i), i);
     endif
   endfor
   
