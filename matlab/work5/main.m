@@ -15,7 +15,7 @@ dlmwrite("msg.txt", msg, ' ');
 %%Задание 7
 [b, n] = calc_info(msg, alph, ralph);
 %%Задание 8
-avg = b / length(msg);
+avg = b / (n / log2(length(alph)));
 %%Задание 9
 results = [b, n, avg, en, red];
 save -ascii results.txt results;
