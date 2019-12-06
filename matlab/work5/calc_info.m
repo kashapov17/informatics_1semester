@@ -15,9 +15,10 @@ function [b,n] = calc_info(msg, alph, alph_p)
     if any(m)
       b -= log2(alph_p(m));
     else
+      len_msg--;
       warning("Символ '%s' на %d позиции из msg не найден в алфавите", msg(i), i);
     endif
   endfor
   
-  n = length(msg)*log2(length(alph));
+  n = len_msg*log2(length(alph));
 endfunction
