@@ -5,8 +5,9 @@ function n = read_num_bin(s)
       neg = true;
     endif
     
-    s_int = s(1:find(s=='.')-1);
-    s_frac = s(find(s=='.')+1:end);
+    dot_pos = find(s=='.');
+    s_int = s(1:dot_pos-1);
+    s_frac = s(dot_pos+1:end);
     n = to_dec(s_int) + to_dec(s_frac) / 2^length(s_frac);
     
     if neg
